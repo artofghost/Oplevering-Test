@@ -1,0 +1,30 @@
+﻿@model IEnumerable<NotesModel>
+@{
+    ViewData["Title"] = "Here u find your Notes";
+}
+<h1>Notes</h1>
+<br />
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Text</th>
+         
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (NotesModel notesModel in Model)
+        {
+            <tr>
+                <td>@notesModel.Name</td>
+                <td>@notesModel.Text</td>       
+               
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>

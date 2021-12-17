@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CharacterModel>
+@{
+    ViewData["Title"] = "Here u find your Characters";
+}
+<h1>Characters</h1>
+<br />
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Icon</th>
+            <th>Colour</th>
+            <th>Class</th>
+            <th>Race</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CharacterModel characterModel in Model)
+        {
+            <tr>
+                <td>@characterModel.Name</td>
+                <td>@characterModel.Icon</td>
+                <td>@characterModel.Colour</td>
+                <td>@characterModel.Class</td>
+                <td>@characterModel.Race</td>
+
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
+<br />
+@*<form asp-action="Create" class="form-horizontal">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label class="control-label">Name</label>
+        <input asp-for="@Name" class="form-control" />
+        <span asp-validation-for="Emp_Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">City</label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">State</label>
+        <input asp-for="State" class="form-control" />
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Country</label>
+        <input asp-for="" class="form-control" />
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Department</label>
+        <input asp-for="Department" class="form-control" />
+        <span asp-validation-for="Department" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn bg-primary" />
+
+    </div>
+</form>
+@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>
+
+            alert('@TempData["msg"]')
+        </script>
+
+    }
+}*@

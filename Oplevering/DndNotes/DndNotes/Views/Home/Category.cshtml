@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CategoryModel>
+@{
+    ViewData["Title"] = "Here u find your Categorys";
+}
+<h1>Categorys</h1>
+<br />
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Icon</th>
+            <th>Colour</th>
+           
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CategoryModel categoryModel in Model)
+        {
+            <tr>
+                <td>@categoryModel.Name</td>
+                <td>@categoryModel.Icon</td>
+                <td>@categoryModel.Colour</td>
+             
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
