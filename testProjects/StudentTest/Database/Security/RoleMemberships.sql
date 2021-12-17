@@ -1,0 +1,6 @@
+﻿ALTER SERVER ROLE [sysadmin] ADD MEMBER [MSI\atgno];
+
+
+GO
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [NT SERVICE\SQLWriter];
+

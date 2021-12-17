@@ -1,0 +1,79 @@
+﻿@model StudentManagerModel
+@{
+    ViewData["Title"] = "Here u find your Students";
+
+
+}
+<h1>Students</h1>
+<br />
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (StudentModel studentModel in Model.Students)
+        {
+            <tr>
+                <td>@studentModel.Name</td>
+                <td>@studentModel.School</td>
+
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
+@using (Html.BeginForm("Student", "Home", FormMethod.Post))
+
+
+{
+
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Person Details</th>
+        </tr>
+        <tr>
+            <td>Name: </td>
+            <td>
+                @Html.TextBoxFor(m => m.Student.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>School: </td>
+            <td>
+                @Html.TextBoxFor(m => m.Student.School)
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+}
+@*<table class="table">
+        <tr>
+            <th scope="col">Name</th>
+
+        </tr>
+
+        @foreach (StudentModel studentModel in Model)
+        {
+            <tr>
+                <td>@studentModel.Name</td>
+
+            </tr>
+
+        }
+
+
+
+    </table>*@
+
+

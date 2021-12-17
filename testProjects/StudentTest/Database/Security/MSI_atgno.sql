@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [MSI\atgno]
+    FROM WINDOWS;
+
